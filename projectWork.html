@@ -1,0 +1,70 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+</head>
+<body>
+<div class="container"></div>
+<div class="jumbotron"><h1 id="title">New York Times Search<h1></div>    
+<div class="row">
+<div class="col-sm-10">
+<br>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+    <strong>
+    Search Parameters
+    </strong>
+    </h3>
+    </div>
+</div>
+<div class="panel-body">
+<form role="form">
+<label for="search">Search Term:</label>
+<input type="text" class="form-control" id="searchTerm">
+</div>
+
+<div class="panel-body">
+<form role="form">
+<label for="search">Number of Records to Retrieve:</label>
+<select class="form-control" id="numRecords">
+<option value="1">1</option>
+<option value="5" selected>5</option>
+<option value="10" selected>10</option>
+</select>
+
+</div>
+
+<div class="panel-body">
+<form role="form">
+<label for="search">Start Year (Optional)</label>
+<input type="text" class="form-control" id="startyear">
+</div>
+
+<div class="panel-body">
+<form role="form">
+<label for="search">End Year (Optional)</label>
+<input type="text" class="form-control" id="endyear"><br>
+<button type="submit" id="submit">Search<span class="glyphicon glyphicon-search" id="searchicon"></span></button>
+<button>Clear Results<span class="glyphicon glyphicons-garbage"id="searchicon"></span></button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="script/javascript">
+	var getSearchTerm = $('#searchTerm').val();
+	var getRecords = $('#records').val();
+	var getStartYear = $('#startyear').val();
+	var getEndYear = $('#endyear').val();
+	var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=";
+//https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=";
+
+	$('#submit').click(function() {
+		queryURL += getSearchTerm;
+		queryURL += "begin_date=" + getStartYear;
+		queryURL += "end_date=" + getEndYear;
+	});
+
+</script>
+
+</body>
+</html>
