@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 // http://api.nytimes.com/svc/search/v2/articlesearch
@@ -26,7 +25,7 @@ var Nytsearchurl = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" 
 
 
 
-=======
+
 
 
 // http://api.nytimes.com/svc/search/v2/articlesearch
@@ -54,4 +53,4 @@ var Nytsearchurl = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" 
 
 
 
->>>>>>> bcd18314da00ae614bee1bb8834e89d1cbf23b91
+

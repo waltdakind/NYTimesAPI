@@ -1,13 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<<<<<<< HEAD
-​
-​
-=======
 
-
->>>>>>> bcd18314da00ae614bee1bb8834e89d1cbf23b91
 </head>
 <body>
 <div class="container"></div>
@@ -29,11 +23,7 @@
 <label for="search">Search Term:</label>
 <input type="text" class="form-control" id="searchTerm">
 </div>
-<<<<<<< HEAD
-​
-=======
 
->>>>>>> bcd18314da00ae614bee1bb8834e89d1cbf23b91
 <div class="panel-body">
 <form role="form">
 <label for="search">Number of Records to Retrieve:</label>
@@ -42,34 +32,31 @@
 <option value="5" selected>5</option>
 <option value="10" selected>10</option>
 </select>
-<<<<<<< HEAD
+
 ​
 </div>
 ​
-=======
+
 
 </div>
 
->>>>>>> bcd18314da00ae614bee1bb8834e89d1cbf23b91
+
 <div class="panel-body">
 <form role="form">
 <label for="search">Start Year (Optional)</label>
 <input type="text" class="form-control" id="startyear">
 </div>
-<<<<<<< HEAD
-​
-=======
 
->>>>>>> bcd18314da00ae614bee1bb8834e89d1cbf23b91
+
 <div class="panel-body">
 <form role="form">
 <label for="search">End Year (Optional)</label>
 <input type="text" class="form-control" id="endyear"><br>
-<<<<<<< HEAD
+
 <button id="submit">Search<span class="glyphicon glyphicon-search" id="searchicon"></span></button>
-=======
+
 <button type="submit" id="submit">Search<span class="glyphicon glyphicon-search" id="searchicon"></span></button>
->>>>>>> bcd18314da00ae614bee1bb8834e89d1cbf23b91
+
 <button>Clear Results<span class="glyphicon glyphicons-garbage"id="searchicon"></span></button>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -78,23 +65,23 @@
 	var getRecords = $('#records').val();
 	var getStartYear = $('#startyear').val();
 	var getEndYear = $('#endyear').val();
-<<<<<<< HEAD
+
 	var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=f00d8dbd623a99f7d310810bf38cff90:9:74629258&q=";
 //https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=";
 ​
 	$('#submit').click(function() {
 		alert("hey")
-=======
+
 	var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=";
 //https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=";
 
 	$('#submit').click(function() {
->>>>>>> bcd18314da00ae614bee1bb8834e89d1cbf23b91
+
 		queryURL += getSearchTerm;
 		queryURL += "begin_date=" + getStartYear;
 		queryURL += "end_date=" + getEndYear;
 	});
-<<<<<<< HEAD
+
 ​
 ​
 	$.ajax({url: queryURL, method: 'GET'}).done(function(article) {
@@ -109,10 +96,10 @@
 ​
 </script>
 ​
-=======
+
 
 </script>
 
->>>>>>> bcd18314da00ae614bee1bb8834e89d1cbf23b91
+
 </body>
 </html>
