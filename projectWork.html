@@ -5,101 +5,51 @@
 </head>
 <body>
 <div class="container"></div>
-<div class="jumbotron"><h1 id="title">New York Times Search<h1></div>    
-<div class="row">
-<div class="col-sm-10">
+		<div class="jumbotron">
+		<h1 id="title">New York Times Search<h1>
+		</div>    
+<div class="row"><div class="col-sm-10">
 <br>
+
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <h3 class="panel-title">
-    <strong>
-    Search Parameters
-    </strong>
-    </h3>
-    </div>
+	<div class="panel-heading">
+<h3 class="panel-title"> <strong>Search Parameters</strong>
+</h3>
+	</div>
 </div>
-<div class="panel-body">
+
+	<div class="panel-body">
 <form role="form">
 <label for="search">Search Term:</label>
 <input type="text" class="form-control" id="searchTerm">
-</div>
+	</div>
 
-<div class="panel-body">
+	<div class="panel-body">
 <form role="form">
 <label for="search">Number of Records to Retrieve:</label>
 <select class="form-control" id="numRecords">
 <option value="1">1</option>
-<option value="5" selected>5</option>
-<option value="10" selected>10</option>
+<option value="5">5</option>
+<option value="10" "selected">10</option>
 </select>
+	</div>
 
-​
-</div>
-​
-
-
-</div>
-
-
-<div class="panel-body">
+	<div class="panel-body">
 <form role="form">
 <label for="search">Start Year (Optional)</label>
 <input type="text" class="form-control" id="startyear">
-</div>
+	</div>
+	
+	<div class="panel-body">
+		<form role="form">
+		<label for="search">End Year (Optional)</label>
+		<input type="text" class="form-control" id="endyear"><br>
+			</div>
+<button id="apiSearch">Search<span class="glyphicon glyphicon-search" id="searchicon"></span></button>
 
-
-<div class="panel-body">
-<form role="form">
-<label for="search">End Year (Optional)</label>
-<input type="text" class="form-control" id="endyear"><br>
-
-<button id="submit">Search<span class="glyphicon glyphicon-search" id="searchicon"></span></button>
-
-<button type="submit" id="submit">Search<span class="glyphicon glyphicon-search" id="searchicon"></span></button>
-
-<button>Clear Results<span class="glyphicon glyphicons-garbage"id="searchicon"></span></button>
+<button id = "clearResults">Clear Results<span class="glyphicon glyphicons-garbage"id="searchicon"></span></button>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script type="script/javascript">
-	var getSearchTerm = $('#searchTerm').val();
-	var getRecords = $('#records').val();
-	var getStartYear = $('#startyear').val();
-	var getEndYear = $('#endyear').val();
-
-	var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=f00d8dbd623a99f7d310810bf38cff90:9:74629258&q=";
-//https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=";
-​
-	$('#submit').click(function() {
-		alert("hey")
-
-	var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=";
-//https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=";
-
-	$('#submit').click(function() {
-
-		queryURL += getSearchTerm;
-		queryURL += "begin_date=" + getStartYear;
-		queryURL += "end_date=" + getEndYear;
-	});
-
-​
-​
-	$.ajax({url: queryURL, method: 'GET'}).done(function(article) {
-​
-	 	console.log(article);
-​
-	 	for (i = 0; i < getRecords; i++) {
-	 		$(".jumbotron").append(article.response.docs[i].abstract);
-	 	};
-​
-	});
-​
-</script>
-​
-
-
-</script>
-
-
+<script src="backend.js"></script>
 </body>
 </html>

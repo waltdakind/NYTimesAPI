@@ -1,0 +1,84 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+</head>
+<body>
+<div class="container"></div>
+<div class="jumbotron"><h1 id="title">New York Times Search<h1></div>    
+<div class="row">
+<div class="col-sm-10">
+<br>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+    <strong>
+    Search Parameters
+    </strong>
+    </h3>
+    </div>
+</div>
+<div class="panel-body">
+<form role="form">
+<label for="search">Search Term:</label>
+<input type="text" class="form-control" id="searchTerm">
+</div>
+
+<div class="panel-body">
+<form role="form">
+<label for="search">Number of Records to Retrieve:</label>
+<select class="form-control" id="numRecords">
+<option value="1">1</option>
+<option value="5" selected>5</option>
+<option value="10" selected>10</option>
+</select>
+
+</div>
+
+<div class="panel-body">
+<form role="form">
+<label for="search">Start Year (Optional)</label>
+<input type="text" class="form-control" id="startyear">
+</div>
+
+<div class="panel-body">
+<form role="form">
+<label for="search">End Year (Optional)</label>
+<input type="text" class="form-control" id="endyear"><br>
+<button>Search<span class="glyphicon glyphicon-search" id="searchicon"></span></button>
+<button>Clear Results<span class="glyphicon glyphicons-garbage"id="searchicon"></span></button>
+</div>
+<div class="row">
+<div class="sm-col-10"><br>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+        	<strong>
+        		Top Articles
+        	</strong>
+        </h3>
+        </div>
+     <div class="panel-body" id="well"></div>
+<div class="well" id="articleWell-1"></div>
+<div class="well" id="articleWell-2"></div>
+<div class="well" id="articleWell-3"></div>
+<div class="well" id="articleWell-4"></div>
+<div class="well" id="articleWell-5"></div>
+<div class="well" id="articleWell-6"></div>
+<div class="well" id="articleWell-7"></div>
+<div class="well" id="articleWell-8"></div>
+<div class="well" id="articleWell-9"></div>
+<div class="well" id="articleWell-10">
+     </div>
+
+<script type="text/javascript">
+	
+
+					var wellSection = $("<div>");
+					wellSection.addClass('well');
+					wellSection.attr('id', 'articleWell-' + articleCounter)
+					$('#well').append(wellSection);
+
+		
+</script>
