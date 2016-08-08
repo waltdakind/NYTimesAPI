@@ -1,0 +1,2 @@
+// array with secret API data to store to keep pout of the repo
+exports.NYTimesApiKey = "your_key_here"
